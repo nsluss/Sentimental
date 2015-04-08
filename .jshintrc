@@ -14,7 +14,7 @@
     "maxlen"   : 80,
     "newcap"   : true,
     "shadow"   : false,
-    "strict"   : true,
+    "strict"   : false,
     "unused"   : true,
     "curly"    : true,
     "devel"    : true

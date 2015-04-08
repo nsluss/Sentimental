@@ -1,5 +1,8 @@
+var bluebird = require('bluebird');
+var request = require('request');
 var http = require('http');
 var keys = require('./server/config/keys.js');
+var db = require('./server/config/dbConfig.js');
 
 var searchTerm = 'Jeb Bush';
 var beginDate = '20140101';
@@ -7,7 +10,6 @@ var endDate = '20150406';
 var apiKey = keys.sourceApiKeys.nyt;
 var articles = [];
 
-var db = require('./server/config/dbConfig.js');
 
 var setEndpoint = function(page){
   return 'http://api.nytimes.com/svc/search/v2/articlesearch.json?' +
